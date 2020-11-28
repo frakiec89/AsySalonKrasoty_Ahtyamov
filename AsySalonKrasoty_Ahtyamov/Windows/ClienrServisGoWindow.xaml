@@ -1,0 +1,66 @@
+﻿<Window x:Class="AsySalonKrasoty_Ahtyamov.Windows.ClienrServisGoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsySalonKrasoty_Ahtyamov.Windows"
+        mc:Ignorable="d" 
+        FontFamily="Tahoma" FontSize="20"
+         Icon="beauty_logo.png"
+        Title="Записать клиента на услугу" SizeToContent="WidthAndHeight" MinHeight="450" MinWidth="800">
+
+    <!--Набор кистей-->
+    <Window.Resources>
+        <SolidColorBrush x:Key="brOne" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="255" B="255" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="brTwo" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="228" B="255"/>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="brThree" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="74" B="109" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+
+    </Window.Resources>
+    <Grid>
+        <StackPanel >
+
+            <ComboBox Name="cbServis" Margin="5" SelectedIndex="0"   >
+                <ComboBoxItem Content="Стрижка" />
+                <ComboBoxItem Content="Сушка" />
+                <ComboBoxItem Content="Покраска" />
+            </ComboBox>
+
+            <ComboBox Name="cbClient" Margin="5"  SelectedIndex="0"
+                      >
+                <ComboBoxItem Content="Лена" />
+                <ComboBoxItem Content="Таня" />
+                <ComboBoxItem Content="Иван" />
+            </ComboBox>
+            <Calendar />
+
+            <Button x:Name="btAdd" Content="Записать"
+                       Margin="5"  Click="btAdd_Click"
+                    Background="{StaticResource brTwo}"
+                    />
+
+            <Button x:Name="btDown" Content="назад"
+                       Margin="5"  Click="btDown_Click"
+                    Background="{StaticResource brThree}"
+                    />
+
+            <!--изображение-->
+            <Image Margin="10" MaxHeight="100" Source="beauty_logo.png"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

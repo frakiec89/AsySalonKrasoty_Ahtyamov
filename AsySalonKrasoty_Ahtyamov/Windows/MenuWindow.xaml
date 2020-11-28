@@ -1,0 +1,61 @@
+﻿<Window x:Class="AsySalonKrasoty_Ahtyamov.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsySalonKrasoty_Ahtyamov.Windows"
+        mc:Ignorable="d"
+    FontFamily="Tahoma" FontSize="20"
+        Icon="beauty_logo.png"
+        Title="Меню" SizeToContent="WidthAndHeight" MinHeight="450" MinWidth="800">
+
+    <!--Набор кистей-->
+    <Window.Resources>
+        <SolidColorBrush x:Key="brOne" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="255" B="255" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="brTwo" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="228" B="255"/>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="brThree" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="74" B="109" />
+
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+    </Window.Resources>
+    <Grid>
+        <StackPanel  Margin="10" MinWidth="200" HorizontalAlignment="Center">
+            <Button x:Name="btUsligi" Content="Список услуг"
+                       Margin="5" Click="btUsligi_Click"
+                    Background="{StaticResource brTwo}" ToolTip="Перейти к списку  услуг"
+                    />
+            <Button x:Name="btClient" Content="Список клентов"
+                       Margin="5" Click="btClient_Click"
+                    Background="{StaticResource brTwo}" ToolTip="Перейти к списку клиентов"
+                    />
+            <Button x:Name="btClientServis" Content="Список записей на услуги"
+                       Margin="5" Click="btClientServis_Click"
+                    Background="{StaticResource brTwo}" ToolTip="Перейти к списку  записей на усглу"
+                    />
+            <Button x:Name="btGoServis" Content="Записать клиента на услугу"
+                       Margin="5" Click="btGoServis_Click"
+                    Background="{StaticResource brTwo}" ToolTip=" Записать клиента на  услугу"
+                    />
+
+            <!--изображение-->
+            <Image Margin="10" MaxHeight="100" Source="beauty_logo.png" ToolTip="Http:Salon.ru" />
+
+            <Button x:Name="btDown" Content="Назад" HorizontalAlignment="Center"
+                     Padding="5"  Margin="5" Click="btDown_Click" ToolTip="Перейти к стартовой форме"
+                    Background="{StaticResource  brThree}"
+                    />
+        </StackPanel>
+    </Grid>
+</Window>

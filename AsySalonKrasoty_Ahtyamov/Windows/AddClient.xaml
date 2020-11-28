@@ -1,0 +1,77 @@
+﻿<Window x:Class="AsySalonKrasoty_Ahtyamov.Windows.AddClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsySalonKrasoty_Ahtyamov.Windows"
+    mc:Ignorable="d" 
+        FontFamily="Tahoma" FontSize="20"
+         Icon="beauty_logo.png"
+        Title="Новый Клиент" SizeToContent="WidthAndHeight" MinHeight="700" MinWidth="800">
+
+    <!--Набор кистей-->
+    <Window.Resources>
+        <SolidColorBrush x:Key="brOne" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="255" B="255" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="brTwo" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="228" B="255"/>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="brThree" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="74" B="109" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+
+            <TextBox  Margin="5" Background="{StaticResource brTwo}"
+                      x:Name="tbName"  Text="Имя" ToolTip="Введите имя клиента" />
+            <TextBox  Margin="5" Background="{StaticResource brTwo}"
+                      x:Name="tbSurName"  Text="Фамилия" ToolTip="Введите фамилию клиента" />
+            <TextBox Margin="5"  Background="{StaticResource brTwo}" 
+                     x:Name="tbPatronumic"  Text="Отчество" ToolTip="Введите отчество клиента" />
+
+            <TextBox Margin="5"  Background="{StaticResource brTwo}"
+                     x:Name="tbTekefone" Text="Телефон" ToolTip="Введите телефон клиента(напримеh +7(888)-927-44-17)"  />
+            <TextBox Margin="5"  Background="{StaticResource brTwo}" 
+                     x:Name="tbEmail" Text="Почта" ToolTip="Введите почту клиента (напримеп Salon@mai.ru)"  />
+            <ComboBox Name="bdGender" Margin="5" SelectedIndex="0" ToolTip="Выберете пол" >
+                <ComboBoxItem Content="Мужской"  />
+                <ComboBoxItem Content="Женский" />
+            </ComboBox>
+            <Calendar Margin="5"  x:Name="cdDataBethyDay" ToolTip="Выберете дату вашего рождения"  />
+
+            <Label HorizontalAlignment="Center" Content="Дата рождения"  />
+
+            <Calendar  Margin="5"  x:Name="cdDataReg" ToolTip="Выберете дату регистрации в нагем салоне" />
+
+            <Label HorizontalAlignment="Center" Content="Дата регистрации"/>
+
+
+
+
+
+            <Button Margin="5" x:Name="btSave" Content="Добавть клиента"
+                      Click="btSave_Click" ToolTip="Записать клиента в БД (при удачном сохранении окно закроется само)"
+                    Background="{StaticResource brTwo}"
+                    />
+
+            <!--изображение-->
+            <Image Margin="10" MaxHeight="100" Source="beauty_logo.png" ToolTip="Http:Salon.ru"/>
+
+          
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>

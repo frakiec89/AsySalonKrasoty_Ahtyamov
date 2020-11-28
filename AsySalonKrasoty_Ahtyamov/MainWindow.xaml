@@ -1,0 +1,54 @@
+﻿<Window x:Class="AsySalonKrasoty_Ahtyamov.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsySalonKrasoty_Ahtyamov"
+        mc:Ignorable="d" 
+        FontFamily="Tahoma" FontSize="20"
+         Icon="beauty_logo.png"
+        Title="Вход в систему управдением Салоном" SizeToContent="WidthAndHeight" MinHeight="450" MinWidth="800">
+
+    <!--Набор кистей-->
+    <Window.Resources>
+        <SolidColorBrush x:Key="brOne" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="255" B="255" />
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+        
+        <SolidColorBrush x:Key="brTwo" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="228" B="255"/>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="brThree" >
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="74" B="109" />
+
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+    </Window.Resources>
+    
+    <Grid>
+        <StackPanel >
+            <TextBox  Margin="5" x:Name="tbLogin" Background="{StaticResource brTwo}" ToolTip="Введите логин"/>
+            <Label Margin="5" Content="Логин" HorizontalAlignment="Center"/>
+            <TextBox Margin="5" x:Name="tbPassword" Background="{StaticResource brTwo}" ToolTip="Введите пароль" />
+            <Label Margin="5" Content="Пароль" HorizontalAlignment="Center"/>
+
+            <!--кнопки-->
+            <Button Margin="5" x:Name="btInAdmin" Content="Войти как админ" 
+                     Click="btInAdmin_Click"
+                    Background="{StaticResource brTwo}" ToolTip="Вход с  правами админа(нужен логин  и пароль)"
+                    />
+            <Button x:Name="btInGost" Content="Войти как гость"
+                       Margin="5" Click="btInGost_Click" ToolTip="Вход с правами гостя (логин  и пароль не  нужны)"
+                    Background="{StaticResource brThree}"
+                    />
+            <!--изображение-->
+            <Image Margin="10" MaxHeight="100" Source="beauty_logo.png"  ToolTip="Http:Salon.ru"/>
+        </StackPanel>
+    </Grid>
+</Window>

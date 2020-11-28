@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace AsySalonKrasoty_Ahtyamov.Windows
+{
+    /// <summary>
+    /// Логика взаимодействия для AddServisWindow.xaml
+    /// </summary>
+    public partial class AddServisWindow : Window
+    {
+        public AddServisWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void btSave_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Сохранение  прошло успешно, обновите список услуг");
+            this.Close();
+        }
+    }
+}
