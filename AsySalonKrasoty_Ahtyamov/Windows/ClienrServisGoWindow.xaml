@@ -34,32 +34,32 @@
     <Grid>
         <StackPanel >
 
-            <ComboBox Name="cbServis" Margin="5" SelectedIndex="0"   >
+            <ComboBox Name="cbServis" Margin="5" SelectedIndex="0"   ToolTip="Веберете  услугу из списка" >
                 <ComboBoxItem Content="Стрижка" />
                 <ComboBoxItem Content="Сушка" />
                 <ComboBoxItem Content="Покраска" />
             </ComboBox>
 
-            <ComboBox Name="cbClient" Margin="5"  SelectedIndex="0"
+            <ComboBox Name="cbClient" Margin="5"  SelectedIndex="0"  ToolTip="Веберете клинета  из списка"
                       >
                 <ComboBoxItem Content="Лена" />
                 <ComboBoxItem Content="Таня" />
                 <ComboBoxItem Content="Иван" />
             </ComboBox>
-            <Calendar />
+            <Calendar  x:Name="cbData" Margin="2"  ToolTip="Укажите дату, на которую будет  записан клиент" />
 
             <Button x:Name="btAdd" Content="Записать"
                        Margin="5"  Click="btAdd_Click"
-                    Background="{StaticResource brTwo}"
+                    Background="{StaticResource brTwo}"  ToolTip="Добавит заяку в БД"
                     />
 
-            <Button x:Name="btDown" Content="назад"
-                       Margin="5"  Click="btDown_Click"
+            <Button x:Name="btDown" Content="Назад"
+                       Margin="5"  Click="btDown_Click" ToolTip="Вернутся в  меню"
                     Background="{StaticResource brThree}"
                     />
 
             <!--изображение-->
-            <Image Margin="10" MaxHeight="100" Source="beauty_logo.png"/>
+            <Image Margin="10" MaxHeight="100" Source="beauty_logo.png" ToolTip="Http:Salon.ru" />
         </StackPanel>
 
     </Grid>
